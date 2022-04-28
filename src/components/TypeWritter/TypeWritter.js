@@ -6,25 +6,26 @@ const TypeWritter = () => {
     <div>
       
       <h1
-        style={{ paddingTop: "3rem", margin: "auto 0", fontWeight: "normal" }}
+        style={{  margin: "auto 0", fontWeight: "normal" }}
       >
-        <span style={{ fontSize: "50px",fontWeight:'bold' }}>Providing</span>{" "}
+        <span style={{ fontSize: "33px",fontWeight:'bold' }}>Providing</span>{" "}
         <span
           style={{
             color: "white",
             fontWeight: "bold",
-            fontSize: "50px",
+            fontSize: "33px",
             borderBottom: "4px solid #26B584",
+            color:"#F59E0B"
           }}
         >
           <Typewriter
             words={[
-              "First Class Travel",
-              "Travel Management",
-              "Passenger assistance",
-              "Consulting!",
-              "Technology",
-              "Leisure Services",
+              "eBooks",
+              "Application",
+              "Blog Article",
+              "Innovation!",
+              "Development Tools",
+              
             ]}
             loop={5}
             cursor

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Why people still love retro technology like iPods and instant-film cameras?",
+    "description": "That beaten up Walkman buried in your basement might be someone's hot new accessory. The retro tech market is alive and kicking.\nIn May, Apple refreshed the iPod touch for the first time in four years. Vinyl record sales clocked in at 400 million on average over the past four years, according to data from data tracker Statista. DVD player sales are trending downward, but they still consistently hit four million units sold every holiday quarter, even as recently as 2018.\nOther gadgets that have stayed the course: camcorders, radios, clock radios, desk phones, and DVRs. Millions of these are still in use in US households in 2017, according to Statista.\n\nWhat drives people to continue purchasing vinyl records, instant film cameras, and iPods, long after new products have made those objects irrelevant?\n\nOlder gadgets have a lot of staying power ",
+    "imageName": "Barbados",
+    "img": "https://i.ibb.co/VJpsWhc/maldives3.png",
+    "price":5392
+  },
+  {
+    "id": 2,
+    "title": "Forgotten Apple gadget Apple Pippin (Pt. 1)",
+    "description": "In 1995, Apple debuted its game console in Japan, followed by a wider release in the US in 1996. Called Pippin, the game console was the result of a collaboration between Apple and Japanese company Bandai. Apple built the internals, while Bandai handled the exteriors including the casing, controls, and packaging.\n\nBased on Macintosh architecture, Pippin was designed to be a multimedia game console that could also connect to the internet, something that made Pippin a fascinating device. Unfortunately, the console’s high price tag of $599 and poor selection of games made Pippin obsolete soon. Pippin remains the only game console Apple has ever made.\n",
+    "imageName": "Grenada",
+    "img": "https://i.ibb.co/0s01RR6/maldives2.png",
+    "price":1842
+  },
+  {
+    "id": 3,
+    "title": "Forgotten Apple gadget iPod Hi-Fi (Pt. 2)",
+    "description": "A year before Apple debuted the iPhone in 2007, the company introduced the iPod Hi-Fi. Although many companies tried to make iPod-powered speakers before, they didn’t offer home stereo quality. Apple in a way reimagined the home stereo market with the iPod Hi-Fi. The device was huge, a single white box with a 30-pin dock connector to dock your iPod. The iPod Hi-Fi was controlled using Apple’s universal IR remote.\n\nWhile it was a great speaker with excellent audio quality, the iPod Hi-Fi only worked with third-generation iPods or those that came after. Many also found the $349 price hard to swallow. The iPod Hi-Fi was discontinued in 2007 after being on the market for 20 months.\n",
+    "imageName": "Key West",
+    "img": "https://i.ibb.co/Q6dGpBg/maldives.png",
+    "price":4204
+  },
+  {
+    "id": 4,
+    "title": "Forgotten Apple gadget Newton MessagePad (Pt. 3)",
+    "description": "The Newton MessagePad was Apple’s bold attempt at creating a personal digital assistant (PDA) way back in 1993. It might not have been a huge success, but it did pave the way for mobile devices. The Newton’s biggest feature was handwriting recognition which allowed users to write on the device’s screen with a stylus and the Newton would translate the handwriting into digital text. It also had an infrared networking capability that lets you beam emails and messages from it wirelessly.\n\nOn paper, Newton seemed to be a perfect device, but the execution was flawed. The handwriting recognition was bad and the data transfer was slow. Apple released seven models in over six years before the Newton line was killed by Jobs upon returning to the company in 1997.\n",
+    "imageName": "Bora Bora",
+    "img": "https://i.ibb.co/Ln3pKJw/keywest.png",
+    "price":3932
+  },
+  {
+    "id": 5,
+    "title": "Forgotten Apple gadget Apple QuickTake (Pt. 4)",
+    "description": "At a time when John Sculley became the CEO of Apple, the company ventured into the consumer camera market. The QuickTake 100, released in 1994, was built by Kodak. This was a time when digital cameras were still in the infancy and $700 was a lot of money to pay for Apple’s QuickTake.\n\nThe QuickTake wasn’t a commercial success per se, it did pioneer the digital camera market. It had a binocular-like design and captured images at 640×480 and could snap eight photographs. The QuickTake was essentially a 0.3MP camera. A total of three models were released before Steve Jobs discontinued the QuickTake lineup after taking the charge of Apple in 1997.\n",
+    "imageName": "Emerald Bay",
+    "img": "https://i.ibb.co/CB3t214/borabora.png",
+    "price":1283
+  },
+  {
+    "id": 6,
+    "title": "Forgotten Apple gadget 20th Anniversary Mac (Pt. 5)",
+    "description": "If you thought the $5000 Mac Pro is expensive, think again. On March 20, 1997, Apple released the 20th Anniversary Macintosh, or TAM for $7,499. The limited-edition computer showed Apple’s design prowess and the ability to sell a $7,499 all-in-one PC to consumers in the late 1990s. It was designed by a young Jony Ive. The TAM wasn’t another AIO.\n\n\nThe Mac was pitched as a complete home entertainment solution with a 12.1-inch LCD screen, a custom Bose stereo speaker, leather palm rests on the keyboard, a built-in TV / FM tuner and remote, and a CD-ROM drive. The machine was constructed with gold-colored plastic, fabric, and Italian leather. Only 12,000 units of TAMs were made. The device was so exclusive that a person in a tuxedo would come and set up the Mac at customer’s homes. If you are interested in the 20th Anniversary Macintosh, you can still buy used ones on eBay for upwards of $2000.\n",
+    "imageName": "Maldives",
+    "img": "https://i.ibb.co/bQxx414/borabora2.png",
+    "price":2544
+  }
+]

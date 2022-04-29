@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import logo from "../images/nav-logo.png";
+
 
 const useNav = () => {
   const [navbar, setNavbar] = useState(false);
-  const [navBarLogo, setNavBarLogo] = useState(logo);
+  const [navBarLogo, setNavBarLogo] = useState();
 
   const changeBackground = () => {
     if (window.scrollY >= 300) {

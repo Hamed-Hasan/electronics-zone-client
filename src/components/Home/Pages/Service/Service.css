@@ -1,0 +1,36 @@
+.section-content h2 {
+    font-weight: 500;
+    padding: 0;
+    line-height: 2px;
+    margin: 0 0 35px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    }
+    
+    .section-content h2::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #ddd;
+    bottom: -27px;
+    left: calc(50% - 60px);
+    }
+    
+    .section-content h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    bottom: -34px;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    border: 3px solid #dc9b06;
+    /* outline: 4px solid white; */
+    font-size: 1rem;
+    }

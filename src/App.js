@@ -9,6 +9,7 @@ import CheckOut from "./components/CheckOut/CheckOut";
 import Blog from "./components/Home/Blog";
 import Home from "./components/Home/Home";
 import NotFound from "./components/Home/NotFound/NotFound";
+import ServiceDetail from "./components/Home/Pages/ServiceDetail/ServiceDetail";
 
 function App() {
     return (
@@ -19,11 +20,12 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path='/serviceDetail/:serviceId' element={<ServiceDetail></ServiceDetail>}></Route>
                 <Route
                     path="/checkout/:serviceId"
                     element={
                         <RequireAuth>
-                            <CheckOut/>
+                         
                         </RequireAuth>
                     }
                 />

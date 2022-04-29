@@ -5,15 +5,12 @@ import './Service.css'
 const Service = ({service}) => {
     const navigate = useNavigate();
     const {_id, name, img, description, price,supplier} = service;
-
-
     const navigateToServiceDetail = id =>{
         navigate(`/serviceDetail/${id}`)
     }
-
     return (
         <div>
-          
+    
 <div style={{height: '100%'}} className="w-full hover:-translate-y-5 transition-all bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 <a href="#">
 <img src={img} className="w-full" alt=""/>

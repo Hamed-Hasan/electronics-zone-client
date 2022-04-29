@@ -102,7 +102,19 @@ const Nav = () => {
                   Blog
                 </NavLink>
               </li>
-         
+              
+         {
+           user &&    <li>
+           <NavLink
+             to="/manageservice"
+             className={({ isActive }) =>
+               isActive ? "active" : "inactive"
+             }
+           >
+             Manage Service
+           </NavLink>
+         </li>
+         }
             </ul>
           </div>
         </div>

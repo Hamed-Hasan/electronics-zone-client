@@ -30,7 +30,6 @@ const handleAddUser = event => {
   const img = event.target.img.value
   const supplier = event.target.supplier.value
   const price = event.target.price.value
-  const description = event.target.description.value
   const user = {name, email, img, supplier, price}
   console.log(user)
   const url = `http://localhost:5000/service`;
@@ -44,7 +43,7 @@ const handleAddUser = event => {
   .then(res=> res.json())
   .then(result =>{
       console.log(result);
-      alert('successfully added service');
+     toast.success('user added successfully')
       event.target.reset()
   } )
 }
@@ -93,7 +92,7 @@ const handleAddUser = event => {
             
                 <div class="flex items-center justify-center w-full">
                     <button class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700  focus:outline-none">
-                        Send message
+                        Add New User
                     </button>
                 </div>
             </form>

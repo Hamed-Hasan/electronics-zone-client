@@ -10,6 +10,7 @@ import Blog from "./components/Home/Blog";
 import Home from "./components/Home/Home";
 import NotFound from "./components/Home/NotFound/NotFound";
 import ServiceDetail from "./components/Home/Pages/ServiceDetail/ServiceDetail";
+import { ToastContainer } from "react-toastify";
 
 function App() {
     return (
@@ -32,7 +33,7 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-            
+      
        
         </div>
     );

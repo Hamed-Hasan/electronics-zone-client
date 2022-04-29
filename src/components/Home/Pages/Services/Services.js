@@ -10,7 +10,7 @@ const Services = () => {
     }, []);
     return (
         <div className='container mx-auto my-24'>
-               <div class="section-content mb-16">
+               <div className="section-content mb-16">
         <h2 className='text-center text-4xl'>OUR ELECTRONICS SERVICES</h2>
        
       </div>

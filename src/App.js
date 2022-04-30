@@ -13,6 +13,7 @@ import ServiceDetail from "./components/Home/Pages/ServiceDetail/ServiceDetail";
 import { ToastContainer } from "react-toastify";
 import ManageService from "./components/Home/Pages/ManageService/ManageService";
 import AddItem from "./components/Home/Pages/AddItem/AddItem";
+import MyItem from "./components/Home/Pages/MyItem/MyItem";
 
 function App() {
     return (
@@ -24,12 +25,21 @@ function App() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/addItem" element={<AddItem />} />
+                {/* <Route path="/myItem" element={<MyItem />} /> */}
                 <Route path="/manageservice" element={<ManageService />} />
                 <Route
                     path="/serviceDetail/:serviceId"
                     element={
                         <RequireAuth>
                          <ServiceDetail></ServiceDetail>
+                        </RequireAuth>
+                    }
+                />
+                <Route
+                    path="/myItem"
+                    element={
+                        <RequireAuth>
+                        <MyItem/>
                         </RequireAuth>
                     }
                 />

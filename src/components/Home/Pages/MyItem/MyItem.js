@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { auth } from '../../../../firebase.init';
+import axiosPrivate from '../../../Auth/api/axiosPrivate';
 
 const MyItem = () => {
 

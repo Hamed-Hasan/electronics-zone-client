@@ -34,8 +34,22 @@ const MyItem = () => {
         getOrders();
 
     }, [user])
+    const handleDelete = id => {
 
-    
+        const proceed = window.confirm('you want to delete this item?')
+        if(proceed) {
+          const url = `http://localhost:5000/manage/${id}`;
+          fetch(url, {
+            method: 'DELETE',
+          })
+          .then(res => res.json())
+          .then(data => {
+              const remaining = myItem.filter(product => product._id !== id);
+              setMyItems(remaining);
+          })
+        
+        }
+    }
     return (
         <div>
             
@@ -44,6 +58,8 @@ const MyItem = () => {
                 myItem.map(item => <div key={item._id}>
                    <p>{item.email} : {item.displayName}</p>
                    <img width='300px' src={item.img} alt="" />
+                   
+          <button onClick={() => handleDelete(item._id)}>x</button>
                 </div>)
             }
 

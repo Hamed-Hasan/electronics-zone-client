@@ -115,6 +115,18 @@ const Nav = () => {
            </NavLink>
          </li>
          }
+         {
+           user &&    <li>
+           <NavLink
+             to="/addItem"
+             className={({ isActive }) =>
+               isActive ? "active" : "inactive"
+             }
+           >
+             AddItem
+           </NavLink>
+         </li>
+         }
             </ul>
           </div>
         </div>

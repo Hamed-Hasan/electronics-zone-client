@@ -53,7 +53,7 @@ const handleAddUser = event => {
         <div>
    <section id='card' className="text-gray-600 body-font mt-20">
   <div className="container flex flex-wrap px-5 py-24 mx-auto items-center">
-    <div className="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
+    <div className="w-full md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
 
       
 

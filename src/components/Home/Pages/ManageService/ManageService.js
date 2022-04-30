@@ -67,7 +67,7 @@ update
 {service?.supplier}
 </td>
 <td class="px-6 py-4">
-<Link to='/myItem' className='bg-lime-600 text-white px-4 py-2 rounded-md shadow-lg'>Add User</Link> 
+<Link to='/addItem' className='bg-lime-600 text-white px-4 py-2 rounded-md shadow-lg'>Add User</Link> 
 </td>
 <td class="px-6 py-4">
 <button className='bg-amber-600 text-white px-4 py-2 rounded-md shadow-lg' onClick={() => handleDelete(service._id)}>Delete</button> 

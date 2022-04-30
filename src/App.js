@@ -12,6 +12,7 @@ import NotFound from "./components/Home/NotFound/NotFound";
 import ServiceDetail from "./components/Home/Pages/ServiceDetail/ServiceDetail";
 import { ToastContainer } from "react-toastify";
 import ManageService from "./components/Home/Pages/ManageService/ManageService";
+import AddItem from "./components/Home/Pages/AddItem/AddItem";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/addItem" element={<AddItem />} />
                 <Route path="/manageservice" element={<ManageService />} />
                 <Route
                     path="/serviceDetail/:serviceId"

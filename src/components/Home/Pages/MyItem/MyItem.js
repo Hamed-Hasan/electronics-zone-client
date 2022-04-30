@@ -11,7 +11,7 @@ const MyItem = () => {
 
     const [user] = useAuthState(auth);
     const [myItem, setMyItems] = useState([]);
-    console.log(myItem)
+
     const navigate = useNavigate();
     useEffect( () => {
         
@@ -21,7 +21,7 @@ const MyItem = () => {
             try{
                 const {data} = await axios.get(url);
                 setMyItems(data);
-                console.log(data)
+               
             }
             catch(error){
                 console.log(error.message);
@@ -38,7 +38,7 @@ const MyItem = () => {
 
         const proceed = window.confirm('you want to delete this item?')
         if(proceed) {
-          const url = `http://localhost:5000/manage/${id}`;
+          const url = `http://localhost:5000/delete/${id}`;
           fetch(url, {
             method: 'DELETE',
           })
@@ -46,6 +46,7 @@ const MyItem = () => {
           .then(data => {
               const remaining = myItem.filter(product => product._id !== id);
               setMyItems(remaining);
+              toast('Item deleted successfully')
           })
         
         }
@@ -56,7 +57,7 @@ const MyItem = () => {
             <h2>Your orders: {myItem.length}</h2> 
             {
                 myItem.map(item => <div key={item._id}>
-                   <p>{item.email} : {item.displayName}</p>
+                   <p>{item.email} : {item.displayName} {item.address}</p>
                    <img width='300px' src={item.img} alt="" />
                    
           <button onClick={() => handleDelete(item._id)}>x</button>

@@ -108,12 +108,33 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    if (user) {
-      navigate(from);
-      toast("SuccessFully Login");
-    }
-  }, [user]);
+
+  if (user) {
+    const url = 'http://localhost:5000/login';
+    fetch(url, { 
+        method: 'POST',
+        body: JSON.stringify({
+            email: user.email
+        }),
+        headers: {
+           'Content-type': 'application/json; charset=UTF-8',
+         }
+    })
+    .then(res => res.json())
+    .then((data) => {
+        localStorage.setItem("accessToken", data.token);
+            navigate(from, { replace: true });
+    })
+}
+
+
+
+  // useEffect(() => {
+  //   if (user) {
+  //     navigate(from);
+  //     toast("SuccessFully Login");
+  //   }
+  // }, [user]);
   return (
     <>
     <ReactHelmet title='Login'></ReactHelmet>

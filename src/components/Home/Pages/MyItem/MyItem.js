@@ -19,7 +19,7 @@ const MyItem = () => {
             const email = user?.email;
             const url = `http://localhost:5000/item?email=${email}`;
             try{
-                const {data} = await axios.get(url);
+                const {data} = await axiosPrivate.get(url);
                 setMyItems(data);
                
             }
@@ -54,11 +54,11 @@ const MyItem = () => {
     return (
         <div>
             
-<div id='item-card' class="w-full h-screen my-36">
-    <div class="w-full h-screen flex justify-center items-center">
+<div id='item-card' class="w-full mt-24">
+    <div>
      <div className="container mx-auto">
      <div class="bg-green-100 my-8 w-32 text-center text-green-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">My Total Item {myItem.length}</div>
-     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+     <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
         {
                 myItem.map(item => <div key={item._id}>
                    {/* <p>{item.email} : {item.displayName} {item.address}</p>

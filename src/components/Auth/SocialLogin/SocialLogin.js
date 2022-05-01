@@ -14,9 +14,35 @@ const SocialLogin = () => {
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
+//   if (user) {
+//     navigate(from, { replace: true });
+//   }
+
+
+
   if (user) {
-    navigate(from, { replace: true });
-  }
+        const url = 'http://localhost:5000/login';
+        fetch(url, { 
+            method: 'POST',
+            body: JSON.stringify({
+                email: user.email
+            }),
+            headers: {
+               'Content-type': 'application/json; charset=UTF-8',
+             }
+        })
+        .then(res => res.json())
+        .then((data) => {
+            localStorage.setItem("accessToken", data.token);
+                navigate(from, { replace: true });
+        })
+    }
+
+
+
+ 
+
+
 
   if(fbLoading || gLoading){
   <Spinner/>
@@ -55,3 +81,4 @@ const SocialLogin = () => {
 };
 
 export default SocialLogin;
+

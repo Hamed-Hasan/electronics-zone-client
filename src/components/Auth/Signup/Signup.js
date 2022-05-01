@@ -96,11 +96,33 @@ const Signup = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  useEffect(() => {
-    if (user) {
-      navigate(from);
-    }
-  }, [user]);
+
+  if (user) {
+    const url = 'http://localhost:5000/login';
+    fetch(url, { 
+        method: 'POST',
+        body: JSON.stringify({
+            email: user.email
+        }),
+        headers: {
+           'Content-type': 'application/json; charset=UTF-8',
+         }
+    })
+    .then(res => res.json())
+    .then((data) => {
+        localStorage.setItem("accessToken", data.token);
+            navigate(from, { replace: true });
+    })
+}
+
+
+
+
+//   useEffect(() => {
+//     if (user) {
+//       navigate(from);
+//     }
+//   }, [user]);
   const [agree, setAgree] = useState(false);
 
   return (
@@ -251,3 +273,7 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
+

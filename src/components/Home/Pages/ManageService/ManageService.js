@@ -31,7 +31,7 @@ const ManageService = () => {
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mx-20 py-36">
 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+<thead class="text-xs text-gray-700 uppercase rounded-none bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
 <tr>
 <th scope="col" class="px-6 py-3">
 Product name
@@ -52,7 +52,7 @@ Images
 <th scope="col" class="px-6 py-3">
 Price
 </th>
-<th scope="col" class="px-6 py-3 rounded-lg">
+<th scope="col" class="px-6 py-3">
 update
 </th>
 
@@ -66,8 +66,8 @@ update
 <td class="px-6 py-4">
 {service?.supplier}
 </td>
-<td class="px-6 py-4">
-<Link to='/addItem' className='bg-lime-600 text-white px-4 py-2 rounded-md shadow-lg'>Add User</Link> 
+<td class=" py-4">
+<Link to='/addItem' style={{padding: '8px 8px'}} className='bg-lime-600 text-white  rounded-md shadow-lg'>Add User</Link> 
 </td>
 <td class="px-6 py-4">
 <button className='bg-amber-600 text-white px-4 py-2 rounded-md shadow-lg' onClick={() => handleDelete(service._id)}>Delete</button> 

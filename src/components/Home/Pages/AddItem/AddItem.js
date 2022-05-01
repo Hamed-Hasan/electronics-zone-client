@@ -39,8 +39,8 @@ const AddItem = () => {
         <>
       
 
-      <section class=" body-font h-screen md:flex flex-col px-36 py-32 bg-gradient-to-tr from-gray-800 to-gray-700 mt-24">
-      <div class="container mx-auto">
+      <section class=" body-font h-auto md:flex flex-col py-32 bg-gradient-to-tr from-gray-800 to-gray-700 mt-24">
+      <div class="">
 			<div class="flex justify-center px-6 my-12 -mt-20">
 			
 				<div class="w-full xl:w-3/4 lg:w-11/12 flex">

@@ -9,7 +9,7 @@ const RequireAuth = ({ children }) => {
   const [user, loading, error] = useAuthState(auth);
 
   const location = useLocation();
-  const [sendEmailVerification, sending, error1] = useSendEmailVerification(auth);
+
   if (loading) {
     return <Spinner />;
   }

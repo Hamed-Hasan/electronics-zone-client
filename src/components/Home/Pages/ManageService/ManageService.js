@@ -1,13 +1,49 @@
 
-import React from 'react';
+
+import React, { useState } from 'react';
+import Modal from 'react-modal/lib/components/Modal';
+
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useService from '../../../../hooks/useService';
-
+// import React, { useState } from 'react';
 import './ManageService.css'
+import { GrUpdate } from 'react-icons/gr'
+const customStyles = {
+  content: {
+    top: "60%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "black"
+  },
+};
+
+Modal.setAppElement("#root");
+
 
 const ManageService = () => {
     const [services, setServices] = useService();
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
+    function openModal() {
+      setIsOpen(true);
+    }
+  
+    function afterOpenModal() {
+      // references are now sync'd and can be accessed.
+      // subtitle.style.color = "#f00";
+    }
+  
+    function closeModal() {
+      setIsOpen(false);
+    }
+
+
+
 
     const handleDelete = id =>{
         const proceed = window.confirm('Are you sure you want to delete this service')
@@ -26,6 +62,44 @@ const ManageService = () => {
         }
       }
   
+
+      const handleUpdate = (event) => {
+        event.preventDefault();
+        const name = event.target.userName.value;
+        const email = event.target.email.value;
+        const img = event.target.img.value;
+        const supplier = event.target.supplier.value;
+        const price = event.target.price.value;
+        const url = `http://localhost:5000/update/${services[0]._id}`
+        fetch(url, {
+          method: 'PUT',
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({ 
+            name,
+            email,
+            img,
+            supplier,
+            price
+           })
+        })
+        .then(res => res.json())
+        .then(data => {
+          // const remaining = services.filter(service => service._id !== id);
+          // setServices(remaining);
+          // setIsReload(!isReload)
+          alert('update data')
+        })
+    
+      };
+
+
+
+
+
+
+
     return (
         <div className='mt-24 bg-gray-700'>
 
@@ -85,7 +159,62 @@ update
 {service?.price}
 </td>
 <td class="px-6 py-4 text-right">
-<a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+<a onClick={openModal} href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+<Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <button onClick={closeModal} className="bg-red-600 px-2 text-white rounded">
+          close
+        </button>
+        <div>Please insert your text</div>
+        <div className=" p-3 ">
+          
+        <form  onSubmit={handleUpdate}>
+                <div class="md:flex items-center mt-8">
+                    <div class="w-full md:w-1/2 flex flex-col">
+                        <label class="font-semibold leading-none text-gray-300">Name</label>
+                        <input required type="text" name='name' class="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" />
+                    </div>
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-2">
+                        <label class="font-semibold leading-none text-gray-300">Email</label>
+                        <input required type="email" name='email' class="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded"/>
+                    </div>
+                </div>
+                <div class="md:flex items-center mt-6">
+                    <div class="w-full md:w-1/2 flex flex-col">
+                        <label class="font-semibold leading-none text-gray-300">Images</label>
+                        <input required type="text" name='img' class="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded" />
+                    </div>
+                    <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-2">
+                        <label class="font-semibold leading-none text-gray-300">Supplier</label>
+                        <input required type="text" name='supplier' class="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded"/>
+                    </div>
+                </div>
+             
+                <div class="md:flex items-center mt-4">
+                    <div class="w-full flex flex-col">
+                        <label class="font-semibold leading-none text-gray-300">Price</label>
+                        <input required type="number" name='price' class="leading-none text-gray-50 p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-gray-800 rounded"/>
+                    </div>
+                    
+                </div>
+            
+                <div class="flex items-center justify-center w-full">
+                    <button class="mt-9 flex items-center  font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700  focus:outline-none">
+                       Update
+                        <GrUpdate className='ml-2 text-lg'/>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+      </Modal>
+
+
 </td>
 </tr>)}
 

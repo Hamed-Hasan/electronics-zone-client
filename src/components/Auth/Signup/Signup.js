@@ -154,7 +154,7 @@ const Signup = () => {
                   />
                   {error?.email && (
                     <p className="text-red-600 text-left mt-8 ml-6 ">
-                      <BiErrorCircle className="relative -left-5 top-" />
+                      <BiErrorCircle className="relative -left-5 top-5" />
                       {error.email}
                     </p>
                   )}
@@ -182,7 +182,7 @@ const Signup = () => {
                     />
                     {error?.password && (
                       <p className="text-red-600 text-left -mt-2 ml-6 ">
-                        <BiErrorCircle className="relative -left-5 top-6" />
+                        <BiErrorCircle className="relative -left-5 top-5" />
                         {error.password}
                       </p>
                     )}

@@ -5,12 +5,29 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { auth } from '../../../../firebase.init';
 import useServiceDetail from '../../../../hooks/useServiceDetail';
-import item from '../../../../images/item.jpg'
+import item from '../../../../images/item.jpg';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import svg from "../../../../images/success-modal.svg";
 import './AddItem.css'
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  borderRadius: "16px",
+  boxShadow: 24,
+  p: 4,
+};
+
 const AddItem = () => {
-    // const {serviceId} = useParams();
-    // const [service] = useServiceDetail(serviceId)
-    // console.log(service)
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
     const [user] = useAuthState(auth);
 
     const handlePlaceOrder = event =>{
@@ -28,7 +45,8 @@ const AddItem = () => {
         .then(response => {
             const { data} = response
             if(data.insertedId){
-                toast('you order bookd')
+                // toast('you order bookd')
+                handleOpen();
                 event.target.reset();
             }
         })
@@ -76,10 +94,37 @@ const AddItem = () => {
       </div>
       <input type="submit" value='Add Item' class="block w-full cursor-pointer bg-amber-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"/>
     </form>
+
 					</div>
 				</div>
 			</div>
 		</div>
+
+    <div>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <div className="text-center flex justify-center">
+                    <img src={svg} className="h-24 " alt="" />
+                  </div>
+                  <Typography
+                    id="modal-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    Your Item Added Successfully
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                   Check your Item 
+                   go to MyItem page
+                  </Typography>
+                </Box>
+              </Modal>
+            </div>
 </section>
 
 

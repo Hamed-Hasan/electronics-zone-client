@@ -1,10 +1,33 @@
+import { Modal } from '@mui/material';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import svg from "../../../../images/success-modal.svg";
 import useService from '../../../../hooks/useService';
 import useServiceDetail from '../../../../hooks/useServiceDetail';
 
+const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    borderRadius: "16px",
+    boxShadow: 24,
+    p: 4,
+  };
+
+
 const ServiceDetail = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+
+
     const {serviceId} = useParams();
     const [service] = useServiceDetail(serviceId)
     const handleDelete = (id) => {
@@ -42,9 +65,11 @@ const handleAddUser = event => {
   })
   .then(res=> res.json())
   .then(result =>{
-      console.log(result);
-     toast.success('user added successfully')
+    //   console.log(result);
+    //  toast.success('user added successfully')
+    handleOpen();
       event.target.reset()
+
   } )
 }
 
@@ -126,6 +151,40 @@ const handleAddUser = event => {
     </div>
   </div>
 </section>
+
+
+
+<div>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box sx={style}>
+                  <div className="text-center flex justify-center">
+                    <img src={svg} className="h-24 " alt="" />
+                  </div>
+                  <Typography
+                    id="modal-modal-title"
+                    variant="h6"
+                    component="h2"
+                  >
+                    Service Added Successfully
+                  </Typography>
+                  <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                 Check your service 
+                 go to Home page & Manage service page & Customize your service 😀
+                  </Typography>
+                </Box>
+              </Modal>
+            </div>
+
+
+
+
+
+
         </div>
     );
 };

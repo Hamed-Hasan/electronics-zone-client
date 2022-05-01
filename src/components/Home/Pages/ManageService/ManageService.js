@@ -86,9 +86,9 @@ const ManageService = () => {
         })
         .then(res => res.json())
         .then(data => {
-          // const remaining = services.filter(service => service._id !== id);
-          // setServices(remaining);
-          // setIsReload(!isReload)
+          const remaining = services.filter(service => service._id !== services[0]._id);
+          setServices(remaining);
+     
           alert('update data')
         })
     

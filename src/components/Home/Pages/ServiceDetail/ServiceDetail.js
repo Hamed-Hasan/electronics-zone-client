@@ -5,9 +5,8 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import svg from "../../../../images/success-modal.svg";
-import useService from '../../../../hooks/useService';
 import useServiceDetail from '../../../../hooks/useServiceDetail';
-
+import { FcAddDatabase } from 'react-icons/fc';
 const style = {
     position: "absolute",
     top: "50%",
@@ -116,8 +115,9 @@ const handleAddUser = event => {
                 </div>
             
                 <div class="flex items-center justify-center w-full">
-                    <button class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700  focus:outline-none">
+                    <button class="mt-9 flex items-center  font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700  focus:outline-none">
                         Add New User
+                        <FcAddDatabase className='ml-2 text-lg'/>
                     </button>
                 </div>
             </form>
@@ -140,7 +140,9 @@ const handleAddUser = event => {
 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${service.price}</h5>
 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Supplier {service.supplier}</h5>
 <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{service.description}</p>
-<button onClick={() => handleDelete(service._id) } type="button" className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delivered</button>
+<button onClick={() => handleDelete(service._id) } type="button" className="flex items-center text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Delivered 
+<svg class="w-6 h-6 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+</button>
 
 </div>
 

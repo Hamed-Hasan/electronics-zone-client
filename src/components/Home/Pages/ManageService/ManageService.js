@@ -67,10 +67,16 @@ update
 {service?.supplier}
 </td>
 <td class=" py-4">
-<Link to='/addItem' style={{padding: '8px 8px'}} className='bg-lime-600 text-white  rounded-md shadow-lg'>Add User</Link> 
+<Link to='/addItem' style={{padding: '8px 8px'}} className='bg-lime-600 flex justify-center items-center text-white  rounded-md shadow-lg'>Add User
+<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+</Link> 
 </td>
 <td class="px-6 py-4">
-<button className='bg-amber-600 text-white px-4 py-2 rounded-md shadow-lg' onClick={() => handleDelete(service._id)}>Delete</button> 
+<button className='bg-amber-600 flex items-center justify-center text-white px-4 py-2 rounded-md shadow-lg' onClick={() => handleDelete(service._id)}>Delete
+<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M6.707 4.879A3 3 0 018.828 4H15a3 3 0 013 3v6a3 3 0 01-3 3H8.828a3 3 0 01-2.12-.879l-4.415-4.414a1 1 0 010-1.414l4.414-4.414zm4 2.414a1 1 0 00-1.414 1.414L10.586 10l-1.293 1.293a1 1 0 101.414 1.414L12 11.414l1.293 1.293a1 1 0 001.414-1.414L13.414 10l1.293-1.293a1 1 0 00-1.414-1.414L12 8.586l-1.293-1.293z" clip-rule="evenodd" />
+</svg>
+</button> 
 </td>
 <td class="px-6 py-4">
 <img src={service?.img} style={{borderRadius: '50%'}} className=' w-10 h-10' alt="" />

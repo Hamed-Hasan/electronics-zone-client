@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import svg from "../../../../images/success-modal.svg";
 import './AddItem.css'
-
+import { FcAddImage } from 'react-icons/fc';
 const style = {
   position: "absolute",
   top: "50%",
@@ -92,7 +92,10 @@ const AddItem = () => {
       
         <input class="pl-2 outline-none border-none bg-gray-900 text-white" type="text" name="img" placeholder='img' required />
       </div>
-      <input type="submit" value='Add Item' class="block w-full cursor-pointer bg-amber-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2"/>
+      
+      <button type="submit" class="flex items-center justify-center w-full cursor-pointer bg-amber-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Add Item 
+      <FcAddImage className="ml-2 text-lg"/>
+      </button>
     </form>
 
 					</div>
@@ -120,7 +123,7 @@ const AddItem = () => {
                   </Typography>
                   <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                    Check your Item 
-                   go to MyItem page
+                   go to MyItem page 
                   </Typography>
                 </Box>
               </Modal>

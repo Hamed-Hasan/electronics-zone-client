@@ -1,15 +1,14 @@
 .table {
-    border-spacing: 0 15px;
+  border-spacing: 0 15px;
 }
 
 i {
-    font-size: 1rem !important;
+  font-size: 1rem !important;
 }
 
-table tr{
-    border:0;
-    margin: 20px 0 !important;
+table tr {
+  border: 0;
+  margin: 20px 0 !important;
 }
-table td{
-  
+table td {
 }

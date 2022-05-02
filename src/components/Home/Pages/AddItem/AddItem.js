@@ -57,43 +57,43 @@ const AddItem = () => {
         <>
       
 
-      <section class=" body-font h-auto md:flex flex-col py-32 bg-gradient-to-tr from-gray-800 to-gray-700 mt-24">
-      <div class="">
-			<div class="flex justify-center px-6 my-12 -mt-20">
+      <section className=" body-font h-auto md:flex flex-col py-32 bg-gradient-to-tr from-gray-800 to-gray-700 mt-24">
+      <div className="">
+			<div className="flex justify-center px-6 my-12 -mt-20">
 			
-				<div class="w-full xl:w-3/4 lg:w-11/12 flex">
+				<div className="w-full xl:w-3/4 lg:w-11/12 flex">
 			
 					<div
-						class="w-full h-auto  mt-40 hidden lg:block mr-10 lg:w-1/2 bg-cover rounded-l-lg">
+						className="w-full h-auto  mt-40 hidden lg:block mr-10 lg:w-1/2 bg-cover rounded-l-lg">
                             <img src={item} className='item-bg ' alt="" />
                         </div>
 			
-					<div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
+					<div className="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
 					
-                        <form onSubmit={handlePlaceOrder} class="bg-gray-900 rounded  py-12 px-12">
-      <h1 class="text-gray-600 font-bold text-2xl mb-1">Add Item!</h1>
+                        <form onSubmit={handlePlaceOrder} className="bg-gray-900 rounded  py-12 px-12">
+      <h1 className="text-gray-600 font-bold text-2xl mb-1">Add Item!</h1>
      
-      <div class="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
-        <input class="pl-2 outline-none border-none bg-gray-900 text-white" type="text" value={user?.displayName} name="name" placeholder='name' required readOnly disabled />
+      <div className="flex items-center border-2 py-2 px-3 rounded-2xl mb-4">
+        <input className="pl-2 outline-none border-none bg-gray-900 text-white" type="text" value={user?.displayName} name="name" placeholder='name' required readOnly disabled />
       </div>
-      <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
+      <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
         
-        <input class="pl-2 outline-none border-none bg-gray-900 text-white" type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled/>
+        <input className="pl-2 outline-none border-none bg-gray-900 text-white" type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled/>
       </div>
-      <div class="flex items-center border-2 my-2 py-2 px-3 rounded-2xl">
+      <div className="flex items-center border-2 my-2 py-2 px-3 rounded-2xl">
        
-        <input class="pl-2 outline-none border-none bg-gray-900 text-white" type="text" name="address" placeholder='address' autoComplete='off' required/>
+        <input className="pl-2 outline-none border-none bg-gray-900 text-white" type="text" name="address" placeholder='address' autoComplete='off' required/>
       </div>
-      <div class="flex items-center border-2 py-2 my-2 px-3 rounded-2xl">
+      <div className="flex items-center border-2 py-2 my-2 px-3 rounded-2xl">
        
-        <input class="pl-2 outline-none border-none bg-gray-900 text-white" type="text" name="phone" placeholder='phone' required  />
+        <input className="pl-2 outline-none border-none bg-gray-900 text-white" type="text" name="phone" placeholder='phone' required  />
       </div>
-      <div class="flex items-center border-2 py-2 px-3 rounded-2xl">
+      <div className="flex items-center border-2 py-2 px-3 rounded-2xl">
       
-        <input class="pl-2 outline-none border-none bg-gray-900 text-white" type="text" name="img" placeholder='img' required />
+        <input className="pl-2 outline-none border-none bg-gray-900 text-white" type="text" name="img" placeholder='img' required />
       </div>
       
-      <button type="submit" class="flex items-center justify-center w-full cursor-pointer bg-amber-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Add Item 
+      <button type="submit" className="flex items-center justify-center w-full cursor-pointer bg-amber-600 mt-4 py-2 rounded-2xl text-white font-semibold mb-2">Add Item 
       <FcAddImage className="ml-2 text-lg"/>
       </button>
     </form>

@@ -5,7 +5,6 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./components/Auth/Login/Login";
 import RequireAuth from "./components/Auth/RequireAuth/RequireAuth";
 import Signup from "./components/Auth/Signup/Signup";
-import CheckOut from "./components/CheckOut/CheckOut";
 import Blog from "./components/Home/Blog";
 import Home from "./components/Home/Home";
 import NotFound from "./components/Home/NotFound/NotFound";
@@ -14,6 +13,9 @@ import { ToastContainer } from "react-toastify";
 import ManageService from "./components/Home/Pages/ManageService/ManageService";
 import AddItem from "./components/Home/Pages/AddItem/AddItem";
 import MyItem from "./components/Home/Pages/MyItem/MyItem";
+import Footer from "./components/Home/Pages/Footer/Footer";
+
+
 
 function App() {
     return (
@@ -23,9 +25,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
-                <Route path="/blog" element={<Blog />} />
                 <Route path="/addItem" element={<AddItem />} />
-                {/* <Route path="/myItem" element={<MyItem />} /> */}
                 <Route path="/manageservice" element={<ManageService />} />
                 <Route
                     path="/serviceDetail/:serviceId"
@@ -43,11 +43,19 @@ function App() {
                         </RequireAuth>
                     }
                 />
+                <Route
+                    path="/blog"
+                    element={
+                        <RequireAuth>
+                       <Blog />
+                        </RequireAuth>
+                    }
+                />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
-      
+   <Footer/>
        <ToastContainer />
         </div>
     );

@@ -4,18 +4,15 @@ import { Typewriter } from "react-simple-typewriter";
 const TypeWritter = () => {
   return (
     <div>
-      
-      <h1
-        style={{  margin: "auto 0", fontWeight: "normal" }}
-      >
-        <span style={{ fontSize: "33px",fontWeight:'bold' }}>Providing</span>{" "}
+      <h1 style={{ margin: "auto 0", fontWeight: "normal" }}>
+        <span style={{ fontSize: "33px", fontWeight: "bold" }}>Providing</span>{" "}
         <span
           style={{
             color: "white",
             fontWeight: "bold",
             fontSize: "33px",
             borderBottom: "4px solid #26B584",
-            color:"#F59E0B"
+            color: "#F59E0B",
           }}
         >
           <Typewriter
@@ -25,7 +22,6 @@ const TypeWritter = () => {
               "Blog Article",
               "Innovation!",
               "Development Tools",
-              
             ]}
             loop={5}
             cursor

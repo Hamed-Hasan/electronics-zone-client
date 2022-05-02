@@ -1,7 +1,7 @@
 .right-timeline,
-.left-timeline{
+.left-timeline {
     border-radius: 20px;
-background: #e0e0e0;
-box-shadow:  5px 5px 10px #bebebe,
-             -5px -5px 10px #ffffff;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #bebebe,
+        -5px -5px 10px #ffffff;
 }

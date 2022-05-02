@@ -14,6 +14,7 @@ import ManageService from "./components/Home/Pages/ManageService/ManageService";
 import AddItem from "./components/Home/Pages/AddItem/AddItem";
 import MyItem from "./components/Home/Pages/MyItem/MyItem";
 import Footer from "./components/Home/Pages/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 
 
@@ -56,6 +57,7 @@ function App() {
                 <Route path="*" element={<NotFound />} />
             </Routes>
    <Footer/>
+   <ScrollToTop/>
        <ToastContainer />
         </div>
     );

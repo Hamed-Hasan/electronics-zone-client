@@ -1,8 +1,10 @@
 import React from "react";
-
+import ReactHelmet from "../../components/ReactHelmet/ReactHelmet";
 const Blog = () => {
   return (
-    <div className="mt-24">
+   <>
+   <ReactHelmet title='Blog'></ReactHelmet>
+   <div className="mt-24">
       <div className="container bg-gray-200 mx-auto w-full h-full">
         <div className="relative wrap overflow-hidden p-10 h-full">
           <div className="section-content mb-16">
@@ -139,6 +141,7 @@ const Blog = () => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

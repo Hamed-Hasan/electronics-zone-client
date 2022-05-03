@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { auth } from "../../../../firebase.init";
 import axiosPrivate from "../../../Auth/api/axiosPrivate";
+import ReactHelmet from "../../../ReactHelmet/ReactHelmet";
 import "./MyItem.css";
 const MyItem = () => {
   const [user] = useAuthState(auth);
@@ -46,6 +47,7 @@ const MyItem = () => {
   };
   return (
     <div>
+      <ReactHelmet title='MyItem'></ReactHelmet>
       <div id="item-card" className="w-full mt-24">
         <div>
           <div className="container mx-auto">

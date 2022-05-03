@@ -1,16 +1,19 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { auth } from '../../firebase.init';
 import useNav from '../../hooks/useNav';
+import { Link } from "react-scroll/modules";
 import './Nav.css'
 const Nav = () => {
     const [user] = useAuthState(auth);
-
+    const navigate = useNavigate();
     const { navbar, navBarLogo } = useNav();
 
-
+const navigateLogin = () => {
+  navigate('/login');
+}
     window.onscroll = function() {scrollBar()};
 
 function scrollBar() {
@@ -19,6 +22,7 @@ function scrollBar() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
 
     return (
 
@@ -45,9 +49,9 @@ function scrollBar() {
                   Logout
                 </span>
               ) : (
-                <Link to="/login" className="text-white">
-                  Login
-                </Link>
+            <div onClick={() => navigateLogin()}>
+              Login
+            </div>
               )}
             </button>
             <button
@@ -102,6 +106,13 @@ function scrollBar() {
                   Home
                 </NavLink>
               </li>
+              <li>
+              <Link to="service" spy={true} smooth={true}>
+                  Services
+              </Link>
+              </li>
+
+
               <li>
                 <NavLink
                   to="/blog"

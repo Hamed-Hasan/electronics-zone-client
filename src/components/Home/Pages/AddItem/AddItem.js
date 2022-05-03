@@ -12,6 +12,7 @@ import Modal from "@mui/material/Modal";
 import svg from "../../../../images/success-modal.svg";
 import './AddItem.css'
 import { FcAddImage } from 'react-icons/fc';
+import ReactHelmet from '../../../ReactHelmet/ReactHelmet';
 const style = {
   position: "absolute",
   top: "50%",
@@ -55,7 +56,7 @@ const AddItem = () => {
 
     return (
         <>
-      
+      <ReactHelmet title='AddItem'></ReactHelmet>
 
       <section className=" body-font h-auto md:flex flex-col py-32 bg-gradient-to-tr from-gray-800 to-gray-700 mt-24">
       <div className="">

@@ -1,6 +1,8 @@
 
+import Works from "../ItemPages/Works/Works";
 import Header from "./Header";
 import "./Home.css";
+import CounterUp from "./Pages/CounterUp/CounterUp";
 import Services from "./Pages/Services/Services";
 
 
@@ -10,6 +12,8 @@ const Home = () => {
     <div>
       <Header />
       <Services/>
+      <CounterUp/>
+      <Works/>
     </div>
   );
 };

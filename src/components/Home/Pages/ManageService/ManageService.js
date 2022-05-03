@@ -7,6 +7,7 @@ import useService from "../../../../hooks/useService";
 // import React, { useState } from 'react';
 import "./ManageService.css";
 import { GrUpdate } from "react-icons/gr";
+import ReactHelmet from "../../../ReactHelmet/ReactHelmet";
 const customStyles = {
   content: {
     top: "60%",
@@ -91,7 +92,9 @@ const ManageService = () => {
   };
 
   return (
-    <div className="mt-24 bg-gray-700">
+ <>
+ <ReactHelmet title='Manage'></ReactHelmet>
+ <div className="mt-24 bg-gray-700">
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg mx-20 py-36">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase rounded-none bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
@@ -288,6 +291,8 @@ const ManageService = () => {
         </table>
       </div>
     </div>
+ 
+ </>
   );
 };
 

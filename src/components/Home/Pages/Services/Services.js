@@ -14,7 +14,7 @@ const Services = () => {
       });
   }, []);
   return (
-    <div className="container mx-auto my-24">
+    <div id='service' className="container mx-auto my-24">
       <div className="section-content mb-16">
         <h2 className="text-center text-lg md:text-4xl">
           OUR ELECTRONICS SERVICES

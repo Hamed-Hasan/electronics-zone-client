@@ -5,7 +5,7 @@ const ReactHelmet = ({title}) => {
   return (
     <div>
       <Helmet>
-        <title>{title} - Travel Management</title>
+        <title>{title} - Electronics Zone</title>
       </Helmet>
     </div>
   );

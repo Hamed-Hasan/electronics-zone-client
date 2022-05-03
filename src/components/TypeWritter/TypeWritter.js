@@ -11,8 +11,8 @@ const TypeWritter = () => {
             color: "white",
             fontWeight: "bold",
             fontSize: "33px",
-            borderBottom: "4px solid #26B584",
-            color: "#F59E0B",
+            borderBottom: "4px solid #F59E0B",
+            color: "white",
           }}
         >
           <Typewriter

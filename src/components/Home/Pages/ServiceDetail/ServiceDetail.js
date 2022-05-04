@@ -33,7 +33,7 @@ const ServiceDetail = () => {
       "Are you sure you want to delete this service?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/service/${id}`, {
+      fetch(`https://secret-peak-70668.herokuapp.com/service/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -53,7 +53,7 @@ const ServiceDetail = () => {
     const price = event.target.price.value;
     const user = { name, email, img, supplier, price };
     console.log(user);
-    const url = `http://localhost:5000/service`;
+    const url = `https://secret-peak-70668.herokuapp.com/service`;
     fetch(url, {
       method: "POST",
       headers: {

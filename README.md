@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Getting Started with Electronics Zone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was React NodeMongoDB with TailWindCss [visit Now](https://electronics-zone.web.app/).
+
+* This site have been makes by react router nodeMongoDB jwt
+* I have been using This site: css framework tailwind & flowbite etc...
+* I have been using This site More packages: motion-react,material-ui,testing-library,axios,firebase,flowbite,framer-motion,react-counterup,react-router,react-firebase-hooks,react-helmet,react-icons,react-modal,react-query,react-scroll,react-typeWriter,react-toastify etc....
+* I have been creating This site: more meaningful components & pages: like Home/Blogs/ManageItem/AddItem/MyItem/404 pages etc...
+* I did my best to create this site as much as I could. I've been to Main Mark Bonus Mark Optional Mark. I've been trying to do everything I can.
 
 ## Available Scripts
 
@@ -9,7 +15,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [Live Website](https://electronics-zone.web.app/) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.

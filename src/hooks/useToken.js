@@ -9,7 +9,7 @@ const useToken = (user) => {
       const email = user?.user?.email;
       if (email) {
         const { data } = await axiosPrivate.post(
-          "http://localhost:5000/login",
+          "https://secret-peak-70668.herokuapp.com/login",
           { email }
         );
         setToken(data);

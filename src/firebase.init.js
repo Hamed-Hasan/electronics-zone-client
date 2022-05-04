@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
    
-    // conceptual-react-auth 
-    apiKey: "AIzaSyDfSDIUokmqc5CxXwSJvhUoDYcdBiVZ9n0",
-  authDomain: "node-mongodb-jwt.firebaseapp.com",
-  projectId: "node-mongodb-jwt",
-  storageBucket: "node-mongodb-jwt.appspot.com",
-  messagingSenderId: "162211539386",
-  appId: "1:162211539386:web:5be7a6be00503e25da9583"
+    // electronics zone
+    apiKey: "AIzaSyDPUaz7MhLrDZmZjra68FEb_0Zgh0bBNT8",
+    authDomain: "electronics-zone.firebaseapp.com",
+    projectId: "electronics-zone",
+    storageBucket: "electronics-zone.appspot.com",
+    messagingSenderId: "244874783397",
+    appId: "1:244874783397:web:6c3a6654a7fde560f6fb4c"
 };
 
 const app = initializeApp(firebaseConfig);

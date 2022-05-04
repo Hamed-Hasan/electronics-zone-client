@@ -6,7 +6,7 @@ const Services = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:5000/service")
+    fetch("https://secret-peak-70668.herokuapp.com/service")
       .then((res) => res.json())
       .then((data) => {
         setServices(data)

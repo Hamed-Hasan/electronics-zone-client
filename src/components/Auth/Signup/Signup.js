@@ -98,7 +98,7 @@ const Signup = () => {
 
 
   if (user) {
-    const url = 'http://localhost:5000/login';
+    const url = 'https://secret-peak-70668.herokuapp.com/login';
     fetch(url, { 
         method: 'POST',
         body: JSON.stringify({

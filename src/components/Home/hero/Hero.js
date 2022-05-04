@@ -33,8 +33,7 @@ function Hero() {
                 <TypeWritter />
               </h2>
               <p className="text-sm md:text-base text-gray-50 mb-4">
-                Explore your favourite events and register now to showcase your
-                talent and win exciting prizes.
+              LET BE ELECTRONICS INVASION BE WITH YOU!
               </p>
               <button
               onClick={() => navigateMyItem()}
@@ -51,40 +50,14 @@ function Hero() {
                     src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"
                   />
                 </div>
-                <div>
+                <div className='hidden xl:block'>
                   <img
                     className="inline-block mt-28 hidden lg:block"
                     src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"
                   />
                 </div>
               </div>
-              {/* <motion.img className="absolute top-52"
-          initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
-          transition={transition}
-          src={glassesimoji}
-          alt=""
-        />
-
-        <motion.div
-          initial={{ top: "-4%", left: "74%" }}
-          whileInView={{ left: "68%" }}
-          transition={transition}
-          className="floating-div"
-        >
-          <FloatinDiv img={crown} text1="Web" text2="Developer" />
-        </motion.div>
-
-        
-        <motion.div
-          initial={{ left: "9rem", top: "18rem" }}
-          whileInView={{ left: "0rem" }}
-          transition={transition}
-          className="floating-div"
-        >
-        
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
-        </motion.div> */}
+             
             </div>
        
           </div>

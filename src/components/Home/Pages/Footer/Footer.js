@@ -9,7 +9,9 @@ const Footer = () => {
             <div>
               <img src={logo} className=" mr-12 w-64 " alt="logo" />
               <p className="max-w-xs mt-4 text-sm text-gray-600">
-                Thanks For visiting our website
+                              
+              Solving Technology Challenges for a Sustainable World
+              Align To Market Demands • Gain Competitive Advantage • Streamline a Smarter Supply Chain
               </p>
               <div className="flex mt-8 space-x-6 text-gray-600">
                 <a

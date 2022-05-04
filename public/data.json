@@ -1,7 +1,7 @@
 [
   {
-    "supplier": "Mashreq Wholesale and Sector",
-    "description": "Further, the better watch brands use 316L stainless steel, which has a higher purity level. The kind of stainless steel and PVD coating is often not marked on the watch. To make sure the kind of stainless steel, you can always check with the seller. But if it is a more expensive brand you can assume that it will be alright.",
+    "supplier": "Mashreq Wholesale Sector",
+    "description": "Further, the better watch brands use 316L stainless steel, which has a higher purity level. The kind of stainless steel and PVD coating is often not marked on the watch. To make sure the kind of stainless steel, you can always check with the seller. But if it is a more expensive brand you ",
     "name": "Watch",
     "img": "https://i.ibb.co/dKxMJdz/gadget6.png",
     "price":592,
@@ -9,14 +9,14 @@
   },
   {
     "supplier": "Jarir Bookstore",
-    "description": "In its more general usage, a personal computer (PC) is a microcomputer designed for use by one person at a time. Prior to the PC, computers were designed for (and only affordable by) companies who attached terminals for multiple users to a single large computer whose resources were shared among all users.",
+    "description": "In its more general usage, a personal computer (PC) is a microcomputer designed for use by one person at a time. Prior to the PC, computers were designed for (and only affordable by) companies who attached terminals for multiple users to a single large computer whose resources were shared among all users designed for use by one person at.",
     "name": "Desktop",
     "img": "https://i.ibb.co/VtD0pMS/gadget2.png",
     "price":4842,
     "quantity":2
   },
   {
-    "supplier": "Virgin Megastore Roshana Mall",
+    "supplier": "Virgin Roshana Mall",
     "description": "Headphones are a pair of small loudspeaker drivers worn on or around the head over a user's ears. They are electroacoustic transducers, which convert an electrical signal to a small loudspeaker drivers worn on or around worn on or around the head over a user's ears.  corresponding sound.",
     "name": "Headphones",
     "img": "https://i.ibb.co/k8LwpKd/gadget4.png",
@@ -25,8 +25,8 @@
   },
   {
     "supplier": "TECHNO COMMERCIAL ENGINEERS",
-    "description": "controller, gaming controller, or simply controller, is an input device used with video games or entertainment systems to provide input to a video game, typically to control an object or character in the game.",
-    "name": "Game Remote device used with video games or entertainment systems to provide input to",
+    "description": "controller, gaming controller, or simply controller, is an input device used with video games or entertainment systems to provide input to a video game, typically to control an object or character in the game.used with video games or entertainment systems to provide",
+    "name": "Game Remote",
     "img": "https://i.ibb.co/b6T4Ky7/gadget5.png",
     "price":932,
     "quantity":5
@@ -40,7 +40,7 @@
     "quantity":1
   },
   {
-    "supplier": "Virgin Megastore Roshana Mall",
+    "supplier": "Virgin Megastore Mall",
     "description": "an electronic system of transmitting transient images of fixed or moving objects together with sound over a wire or through space by apparatus that converts light and sound into electrical waves and reconverts them into visible light rays and audible sound. 2 : a television receiving set.",
     "name": "TV",
     "img": "https://i.ibb.co/McTfpSS/gadget1.png",

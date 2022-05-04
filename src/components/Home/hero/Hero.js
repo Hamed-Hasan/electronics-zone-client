@@ -8,12 +8,15 @@ import glassesimoji from "../../../images/glassesimoji.png"
 import TypeWritter from "../../TypeWritter/TypeWritter";
 import ReactHelmet from "../../ReactHelmet/ReactHelmet";
 import { Link } from "react-scroll/modules";
+import { useNavigate } from "react-router-dom";
 
 
 
 function Hero() {
-  const transition = { duration: 2, type: "spring" };
-  
+  const navigate = useNavigate();
+  const navigateMyItem = () => {
+       navigate('/myItem')
+  }
 
   return (
     <div>
@@ -33,12 +36,12 @@ function Hero() {
                 Explore your favourite events and register now to showcase your
                 talent and win exciting prizes.
               </p>
-              <a
-                href="#"
-                className="bg-transparent hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
+              <button
+              onClick={() => navigateMyItem()}
+                className="bg-transparent cursor-pointer hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
               >
                 Explore Now
-              </a>
+              </button>
             </div>
             <div className="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
               <div className="h-48 flex flex-wrap content-center">
@@ -87,7 +90,7 @@ function Hero() {
           </div>
           <Link to="service" className='block cursor-pointer w-40 mx-auto' smooth={true} spy={true}>
         
-          <div class="scroll-down w-10 h-10 mr-9"></div>
+          <div className="scroll-down w-10 h-10 mr-9"></div>
         </Link>
         </div>
       </section>

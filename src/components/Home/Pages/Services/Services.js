@@ -16,7 +16,7 @@ const Services = () => {
   return (
     <div id='service' className="container mx-auto my-24">
       <div className="section-content mb-16">
-        <h2 className="text-center text-lg md:text-4xl">
+        <h2 className="text-center text-lg py-10 md:text-4xl">
           OUR ELECTRONICS SERVICES
         </h2>
       </div>

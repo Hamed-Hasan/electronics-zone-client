@@ -51,7 +51,7 @@ const SocialLogin = () => {
   const handleGoogle = () => {
     signInWithGoogle()
     if(!gUser){
-      toast.success('Successfully SignIn With Google')
+      // toast.success('Successfully SignIn With Google')
     }else{
       toast.error('Try Again Lager !!')
     }
@@ -59,7 +59,7 @@ const SocialLogin = () => {
   const handleFacebook = () => {
     signInWithFacebook()
     if(!fbUser){
-      toast.success('Successfully SignIn With Facebook')
+      // toast.success('Successfully SignIn With Facebook')
     }else{
       toast.error('Try Again Lager !!')
     }

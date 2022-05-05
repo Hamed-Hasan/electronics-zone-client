@@ -5,7 +5,7 @@ const TypeWritter = () => {
   return (
     <div>
       <h1 style={{ margin: "auto 0", fontWeight: "normal" }}>
-        <span style={{ fontSize: "33px", fontWeight: "bold" }}>Providing</span>{" "}
+        <span style={{ fontSize: "33px", fontWeight: "bold",color: "white" }}>Providing</span>{" "}
         <span
           style={{
             color: "white",

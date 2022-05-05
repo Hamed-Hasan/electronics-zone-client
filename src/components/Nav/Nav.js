@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import { auth } from '../../firebase.init';
 import useNav from '../../hooks/useNav';
+
 import './Nav.css'
 const Nav = () => {
     const [user] = useAuthState(auth);
@@ -89,8 +90,7 @@ function scrollBar() {
             id="mobile-menu-4"
           >
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-              {/* <Link href="home#services">Services</Link> */}
-
+        
               <li>
                 <NavLink
                   to="/"

@@ -17,6 +17,7 @@
   height: 13px;
   border-bottom: 2px solid #fff;
   border-right: 2px solid #fff;
+  margin: 0 0 20px 6px !important;
   z-index: 9;
   left: 50%;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
@@ -26,7 +27,11 @@
   -moz-animation:    fade_move_down 4s ease-in-out infinite;
   animation:         fade_move_down 4s ease-in-out infinite;
 }
-
+@media only screen and (max-width: 600px){
+  .scroll-down {
+    margin: 0 0 38px -11px !important;
+  }
+}
 
 /*animated scroll arrow animation*/
 @-webkit-keyframes fade_move_down {
@@ -44,3 +49,4 @@
   50%  { opacity: 1;  }
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
+

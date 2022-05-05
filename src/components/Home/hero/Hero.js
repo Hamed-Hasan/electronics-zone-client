@@ -1,10 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./HeroStyles.css";
-import { motion } from "framer-motion";
-import FloatinDiv from "../../ItemPages/FloatingDiv/FloatingDiv";
-import thumbup from "../../../images/thumbup.png"
-import crown from "../../../images/crown.png"
-import glassesimoji from "../../../images/glassesimoji.png"
 import TypeWritter from "../../TypeWritter/TypeWritter";
 import ReactHelmet from "../../ReactHelmet/ReactHelmet";
 import { Link } from "react-scroll/modules";
@@ -12,7 +7,9 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 function Hero() {
+
   const navigate = useNavigate();
   const navigateMyItem = () => {
        navigate('/myItem')
@@ -23,8 +20,13 @@ function Hero() {
       <ReactHelmet title='Home'></ReactHelmet>
       <section>
        
-        <div className="bg-gradient-to-r from-zinc-500 to-blue-500 text-white py-16 hero-path ">
-          <div className=" container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24 pb-24">
+
+
+      <header  style={{backgroundImage: `url(https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)`}} id="up" className="hero-path bg-center bg-fixed bg-no-repeat bg-cover h-full  relative">
+	
+  <div className="h-full py-11 bg-opacity-50 bg-black flex items-center justify-center hero-img" >
+  
+  <div className=" container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24 pb-24">
             <div className="flex flex-col w-full lg:w-2/3 justify-center items-start p-8">
               <h1 className="text-3xl md:text-5xl text-yellow-300 mb-0 pb-10 tracking-loose">
                 TechFest
@@ -42,7 +44,7 @@ function Hero() {
                 Explore Now
               </button>
             </div>
-            <div className="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
+            <div className="p-8 py-24 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
               <div className="h-48 flex flex-wrap content-center">
                 <div>
                   <img
@@ -61,11 +63,15 @@ function Hero() {
             </div>
        
           </div>
-          <Link to="service" className='block cursor-pointer w-40 mx-auto' smooth={true} spy={true}>
+
+  </div>
+  <Link to="service" className='block  cursor-pointer w-40 mx-auto' smooth={true} spy={true}>
         
-          <div className="scroll-down w-10 h-10 mr-9"></div>
-        </Link>
-        </div>
+        <div className="scroll-down w-10 h-10 mr-9"></div>
+      </Link>
+</header>
+
+
       </section>
     </div>
   );

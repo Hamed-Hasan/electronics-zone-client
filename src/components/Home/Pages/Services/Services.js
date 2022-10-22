@@ -2,18 +2,28 @@ import React, { useEffect, useState } from "react";
 import Service from "../Service/Service";
 import Spinner from "../../../Spinner/Spinner";
 import { useQuery } from "react-query";
+import axios from "axios";
 const Services = () => {
   // const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const { data: services, isLoading, refetch } = useQuery('services', () => fetch(`https://secret-peak-70668.herokuapp.com/service`, {
-    method: 'GET',
+
+  const { isLoading, isError, data, error, refetch } = useQuery(
+    "joke",
+    async () => {
+      const { data } = await axios("https://secret-peak-70668.herokuapp.com/service");
+      return data;
+    }
+  );
+
+//   const { data: services, isLoading, refetch } = useQuery('services', () => fetch(`https://secret-peak-70668.herokuapp.com/service`, {
+//     method: 'GET',
    
-    headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      }
-})
-    .then(res => res.json()));
+//     headers: {
+//         'Content-type': 'application/json; charset=UTF-8',
+//       }
+// })
+//     .then(res => res.json()));
     refetch();
 if(isLoading) {
   return <Spinner/>
@@ -40,7 +50,7 @@ if(isLoading) {
 <div className='pt-11'>
   {
   loading ? <Spinner/> :   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-  {services.map((service) => (
+  {data.map((service) => (
     <Service key={service._id} service={service} />
   ))}
 </div>

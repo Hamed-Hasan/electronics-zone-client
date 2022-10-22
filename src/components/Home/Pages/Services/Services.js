@@ -1,18 +1,33 @@
 import React, { useEffect, useState } from "react";
 import Service from "../Service/Service";
 import Spinner from "../../../Spinner/Spinner";
+import { useQuery } from "react-query";
 const Services = () => {
-  const [services, setServices] = useState([]);
+  // const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    fetch("https://secret-peak-70668.herokuapp.com/service")
-      .then((res) => res.json())
-      .then((data) => {
-        setServices(data)
-        setLoading(false)
-      });
-  }, []);
+
+  const { data: services, isLoading, refetch } = useQuery('services', () => fetch(`https://secret-peak-70668.herokuapp.com/service`, {
+    method: 'GET',
+   
+    headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      }
+})
+    .then(res => res.json()));
+    refetch();
+if(isLoading) {
+  return <Spinner/>
+}
+  // useEffect(() => {
+  //   setLoading(true);
+  //   fetch("https://secret-peak-70668.herokuapp.com/service")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setServices(data)
+  //       setLoading(false)
+  //     });
+  // }, []);
+
   return (
     <div id='service' className="container mx-auto my-24">
       <div className="section-content mb-16">

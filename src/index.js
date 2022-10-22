@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'flowbite';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient()
 
 ReactDOM.render(
   <HelmetProvider>
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+      <QueryClientProvider client={queryClient}>
+      <App />
+     </QueryClientProvider>
+
       </BrowserRouter>
     </React.StrictMode>
   </HelmetProvider>

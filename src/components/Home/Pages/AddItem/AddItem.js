@@ -42,7 +42,7 @@ const AddItem = () => {
             img:event.target.img.value
         }
         console.log(addItem)
-        axios.post('https://secret-peak-70668.herokuapp.com/addItem', addItem)
+        axios.post('https://electronics-zone-server.vercel.app/addItem', addItem)
         .then(response => {
             const { data} = response
             if(data.insertedId){

@@ -110,7 +110,7 @@ const Login = () => {
 
 
   if (user) {
-    const url = 'https://secret-peak-70668.herokuapp.com/login';
+    const url = 'https://electronics-zone-server.vercel.app/login';
     fetch(url, { 
         method: 'POST',
         body: JSON.stringify({

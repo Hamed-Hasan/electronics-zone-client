@@ -45,7 +45,7 @@ const ManageService = () => {
       "Are you sure you want to delete this service"
     );
     if (proceed) {
-      const url = `https://secret-peak-70668.herokuapp.com/manage/${id}`;
+      const url = `https://electronics-zone-server.vercel.app/manage/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -66,7 +66,7 @@ const ManageService = () => {
     const img = event.target.img.value;
     const supplier = event.target.supplier.value;
     const price = event.target.price.value;
-    const url = `https://secret-peak-70668.herokuapp.com/update/${services[0]._id}`;
+    const url = `https://electronics-zone-server.vercel.app/update/${services[0]._id}`;
     fetch(url, {
       method: "PUT",
       headers: {

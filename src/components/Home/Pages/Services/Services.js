@@ -11,12 +11,12 @@ const Services = () => {
   const { isLoading, isError, data, error, refetch } = useQuery(
     "joke",
     async () => {
-      const { data } = await axios("https://secret-peak-70668.herokuapp.com/service");
+      const { data } = await axios("https://electronics-zone-server.vercel.app/service");
       return data;
     }
   );
 
-//   const { data: services, isLoading, refetch } = useQuery('services', () => fetch(`https://secret-peak-70668.herokuapp.com/service`, {
+//   const { data: services, isLoading, refetch } = useQuery('services', () => fetch(`https://electronics-zone-server.vercel.app/service`, {
 //     method: 'GET',
    
 //     headers: {
@@ -30,7 +30,7 @@ if(isLoading) {
 }
   // useEffect(() => {
   //   setLoading(true);
-  //   fetch("https://secret-peak-70668.herokuapp.com/service")
+  //   fetch("https://electronics-zone-server.vercel.app/service")
   //     .then((res) => res.json())
   //     .then((data) => {
   //       setServices(data)

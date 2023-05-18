@@ -9,7 +9,7 @@ const useToken = (user) => {
       const email = user?.user?.email;
       if (email) {
         const { data } = await axiosPrivate.post(
-          "https://secret-peak-70668.herokuapp.com/login",
+          "https://electronics-zone-server.vercel.app/login",
           { email }
         );
         setToken(data);

@@ -50,7 +50,7 @@ if(isLoading) {
 <div className='pt-11'>
   {
   loading ? <Spinner/> :   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-  {data.map((service) => (
+  {data?.map((service) => (
     <Service key={service._id} service={service} />
   ))}
 </div>

@@ -39,7 +39,7 @@ const MyItem = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          const remaining = myItem.filter((product) => product._id !== id);
+          const remaining = myItem?.filter((product) => product._id !== id);
           setMyItems(remaining);
           toast("Item deleted successfully");
         });
@@ -52,7 +52,7 @@ const MyItem = () => {
         <div>
           <div className="container mx-auto">
             <div className="bg-green-100 flex items-center my-8 w-44 justify-center text-center text-green-800 text-sm font-bold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900 ">
-              My Total Item {myItem.length}
+              My Total Item {myItem?.length}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 ml-2"

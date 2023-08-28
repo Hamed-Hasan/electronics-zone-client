@@ -52,7 +52,7 @@ const ManageService = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log("data", data);
-          const remaining = services.filter((service) => service._id !== id);
+          const remaining = services?.filter((service) => service._id !== id);
           setServices(remaining);
           toast("Deleted User");
         });
@@ -82,7 +82,7 @@ const ManageService = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const remaining = services.filter(
+        const remaining = services?.filter(
           (service) => service._id !== services[0]._id
         );
         setServices(remaining);
@@ -124,7 +124,7 @@ const ManageService = () => {
             </tr>
           </thead>
           <tbody>
-            {services.map((service) => (
+            {services?.map((service) => (
               <tr
                 key={service._id}
                 className="bg-white border-b bg-gray-800  hover:bg-gray-50 "

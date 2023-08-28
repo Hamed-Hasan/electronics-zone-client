@@ -1,4 +1,4 @@
-# Innovate Tech Solutions React Project
+# Innovate Tech Solutions
 
 Welcome to the "Innovate Tech Solutions" React project. This project showcases various technologies and features that have been implemented to create a robust and dynamic web application. Below, you'll find a detailed description of the technologies used and the key features implemented.
 
